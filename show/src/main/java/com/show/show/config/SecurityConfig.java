@@ -33,7 +33,7 @@ public class SecurityConfig {
             // Define authorization rules based on URL patterns and authorities
                 .requestMatchers("/admin/**").hasAuthority("ADMIN")
                 .requestMatchers("/user/**").hasAuthority("USER")
-                .requestMatchers("/registration", "/login").permitAll()
+                .requestMatchers("/registration", "/login", "/adminlogin", "/auth-status").permitAll()
                 .anyRequest().authenticated()
             )
             .formLogin(form -> form
