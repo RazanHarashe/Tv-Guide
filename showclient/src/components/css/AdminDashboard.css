@@ -1,0 +1,141 @@
+ .admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: black;
+  }
+  
+  .header1 h2 {
+    margin: 0;
+    text-align: center;
+    margin-left:1150px;
+  }
+  
+  .header1 button {
+    background-color: #dc3545; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 100px;
+  }
+  
+  .header1 button:hover {
+    background-color: #c82333; 
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+  }
+  
+  nav ul .img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  
+  nav ul img {
+    max-width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 20px 90px;
+    padding-top: 50px;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #007bff;
+    background-color: white;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 210px;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .admin-content {
+    width: 80%;
+    margin-top: 20px;
+  }
+  
+  .manage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .manage-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .manage-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .manage-container form input,
+  .manage-container form textarea,
+  .manage-container form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .manage-container form button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px; 
+  }
+  
+  .manage-container form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .manage-container ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .manage-container ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+   
