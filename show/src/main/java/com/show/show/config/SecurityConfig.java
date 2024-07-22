@@ -34,6 +34,8 @@ public class SecurityConfig {
                 .requestMatchers("/admin/**").hasAuthority("ADMIN")
                 .requestMatchers("/user/**").hasAuthority("USER")
                 .requestMatchers("/registration", "/login", "/adminlogin", "/auth-status").permitAll()
+                .requestMatchers("/shows/**").permitAll() 
+                .requestMatchers("/search").permitAll() 
                 .anyRequest().authenticated()
             )
             .formLogin(form -> form
