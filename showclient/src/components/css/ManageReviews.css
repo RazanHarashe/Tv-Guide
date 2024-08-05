@@ -1,0 +1,96 @@
+.manage-reviews {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.manage-reviews h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.manage-reviews form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.manage-reviews form input,
+.manage-reviews form textarea {
+  width: 300px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.manage-reviews form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.manage-reviews form button:hover {
+  background-color: #0056b3;
+}
+
+.edit-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.review-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.review-table th,
+.review-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.review-table th {
+  background-color:  #007bff;
+  font-weight: bold;
+}
+
+/* .review-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+} */
+
+.review-table tr:hover {
+  background-color: #ddd;
+}
+
+.review-table th, .review-table td {
+  text-align: center;
+}
+
+.review-table button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.review-table button:hover {
+  background-color: #0056b3;
+}
+
+.review-table button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

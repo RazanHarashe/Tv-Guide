@@ -73,5 +73,39 @@ public class AdminController {
         }
     }
 
+    @PostMapping("/admin_users") // Maps HTTP POST requests to /admin_users to this method
+    public ResponseEntity<User> addUser(@RequestBody UserDto userDto) { // Binds the HTTP request body to the UserDto parameter
+        User savedUser = userService.save(userDto); // Calls the save method of UserService to save the user
+        return ResponseEntity.ok(savedUser); // Returns a success response with the saved user
+    }
+
+    @PutMapping("/admin_users/{id}") // Maps HTTP PUT requests to /admin_users/{id} to this method
+    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody UserDto userDto) { // Binds the {id} path variable and the request body to the respective parameters
+        User updatedUser = userService.updateUser(id, userDto); // Calls the updateUser method of UserService to update the user
+        return ResponseEntity.ok(updatedUser); // Returns a success response with the updated user
+    }
+
+    @DeleteMapping("/admin_users/{id}") // Maps HTTP DELETE requests to /admin_users/{id} to this method
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) { // Binds the {id} path variable to the parameter
+        try {
+            userService.deleteUser(id); // Calls the deleteUser method of UserService to delete the user
+            return ResponseEntity.ok("deleted Successfully!"); // Returns a success response with a message
+        } catch (Exception e) { // Catches any exceptions thrown during the deletion
+            return ResponseEntity.badRequest().body("deleted error"); // Returns a bad request response with an error message
+        }
+    }
+
+    @GetMapping("/admin_users") // Maps HTTP GET requests to /admin_users to this method
+    public ResponseEntity<List<User>> getAllUsers() {
+        List<User> users = userService.getAllUsers(); // Calls the getAllUsers method of UserService to get all users
+        return ResponseEntity.ok(users); // Returns a success response with the list of users
+    }
+
+    @GetMapping("/admin_users/{id}") // Maps HTTP GET requests to /admin_users/{id} to this method
+    public ResponseEntity<User> getUserById(@PathVariable Long id) { // Binds the {id} path variable to the parameter
+        User user = userService.getUserById(id); // Calls the getUserById method of UserService to get the user by id
+        return ResponseEntity.ok(user); // Returns a success response with the user
+    }
 }
+
 

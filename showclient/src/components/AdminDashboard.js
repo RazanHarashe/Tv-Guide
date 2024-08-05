@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, Route, Routes, useNavigate } from 'react-router-dom';
-
+import ManageShows from './ManageShows';
+import ManageReviews from './ManageReviews';
+import ManageUsers from './ManageUsers';
 import './css/AdminDashboard.css';
 
 const AdminDashboard = () => {
@@ -29,6 +31,13 @@ const AdminDashboard = () => {
           <li><Link to="admin_users">Manage Users</Link></li>
         </ul>
       </nav>
+      <div className="admin-content">
+        <Routes>
+          <Route path="shows" element={<ManageShows />} />
+          <Route path="reviews" element={<ManageReviews />} />
+          <Route path="admin_users" element={<ManageUsers />} />
+        </Routes>
+      </div>
     </div>
   );
 };

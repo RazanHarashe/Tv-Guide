@@ -33,9 +33,10 @@ public class SecurityConfig {
             // Define authorization rules based on URL patterns and authorities
                 .requestMatchers("/admin/**").hasAuthority("ADMIN")
                 .requestMatchers("/user/**").hasAuthority("USER")
-                .requestMatchers("/registration", "/login", "/adminlogin", "/auth-status").permitAll()
+                .requestMatchers("/registration", "/login", "/adminlogin", "/css/**", "/admin_users/**", "/auth-status").permitAll()
                 .requestMatchers("/shows/**").permitAll() 
                 .requestMatchers("/search").permitAll() 
+                .requestMatchers("/shows/airing-schedule/**").permitAll() 
                 .anyRequest().authenticated()
             )
             .formLogin(form -> form
@@ -69,3 +70,4 @@ public class SecurityConfig {
         auth.userDetailsService(customUserDetailsService).passwordEncoder(passwordEncoder());
     }
 }
+

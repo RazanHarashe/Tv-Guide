@@ -28,7 +28,13 @@ public class Show {
     @Lob
     private byte[] image;
     
-
+    @OneToMany(mappedBy = "show", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<AiringSchedule> airingSchedules;
+    
+    @OneToMany(mappedBy = "show", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<Review> reviews;
 
     
     public Show() {
@@ -36,13 +42,16 @@ public class Show {
 	}
 
 
-	public Show(String name, String genre, String network, String description, byte[] image) {
+	public Show(String name, String genre, String network, String description, byte[] image,
+			List<AiringSchedule> airingSchedules, List<Review> reviews) {
 		super();
 		this.name = name;
 		this.genre = genre;
 		this.network = network;
 		this.description = description;
 		this.image = image;
+		this.airingSchedules = airingSchedules;
+		this.reviews = reviews;
 	}
 
 	public Long getId() {
@@ -94,6 +103,17 @@ public class Show {
 		this.description = description;
 	}
 
+	
+
+	public List<AiringSchedule> getAiringSchedules() {
+		return airingSchedules;
+	}
+
+
+	public void setAiringSchedules(List<AiringSchedule> airingSchedules) {
+		this.airingSchedules = airingSchedules;
+	}
+
 
 	@Override
 	public String toString() {
@@ -112,4 +132,25 @@ public class Show {
 	}
 
 
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
+	}
+	
+  //the value returned by this method will not be stored in the database
+	@Transient
+    public double getAverageRating() {
+        if (reviews == null || reviews.isEmpty()) {
+            return 0;
+        }
+        double sum = 0;
+        for (Review review : reviews) {
+            sum += review.getRating();
+        }
+        return sum / reviews.size();
+    }
 }

@@ -7,6 +7,8 @@ import SignUp from './components/SignUp';
 import AdminLogin from './components/AdminLogin';
 import { AuthProvider, useAuth} from './AuthContext';
 import AdminDashboard from './components/AdminDashboard';
+import ManageUsers from './components/ManageUsers';
+import ManageShows from './components/ManageShows';
 
 const PrivateRoute = ({ element: Component, ...rest }) => {
   const { isAuthenticated } = useAuth();
@@ -29,6 +31,8 @@ const App = () => {
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/adminlogin" element={<AdminLogin />} />
             <Route exact path="/admin" element={<AdminRoute element={AdminDashboard} />} />
+            <Route exact path="/admin/admin_users" element={<AdminRoute element={ManageUsers} />} />
+            <Route exact path="/admin/shows" element={<AdminRoute element={ManageShows} />} />
           </Routes>
         </div>
       </Router>
