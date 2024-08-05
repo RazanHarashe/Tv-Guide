@@ -13,7 +13,7 @@ The TV Guide Application is a comprehensive platform that allows users to search
 - **Image Uploads**: Save shows with photos.
 
 ## Screenshots
-![Main Page Screenshot](Documents/mainPage.png)
+![Main Page Screenshot](C:/Users/rh2/OneDrive - Axsos AG/Documents/mainPage.png)
 
 ## Technologies Used
 
