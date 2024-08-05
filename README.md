@@ -12,10 +12,6 @@ The TV Guide Application is a comprehensive platform that allows users to search
 - **Reviews**: Add, edit, delete, and display reviews for TV shows.
 - **Image Uploads**: Save shows with photos.
 
-## Screenshots
-![Main Page Screenshot](./Documents/mainPage.png)
-<img width="895" alt="image" src="https://github.com/RazanHarashe/Documents/mainPage.png">
-
 ## Technologies Used
 
 **Frontend:**
