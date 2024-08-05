@@ -14,6 +14,7 @@ The TV Guide Application is a comprehensive platform that allows users to search
 
 ## Screenshots
 ![Main Page Screenshot](./Documents/mainPage.png)
+<img width="895" alt="image" src="https://github.com/RazanHarashe/Documents/mainPage">
 
 ## Technologies Used
 
