@@ -1,0 +1,22 @@
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  
+  .schedule-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 0;
+  }
+  
+  .schedule-time {
+    font-weight: bold;
+  }
+  
+  .schedule-episode {
+    font-style: italic;
+  }
+  
