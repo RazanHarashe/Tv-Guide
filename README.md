@@ -24,7 +24,7 @@ The TV Guide Application is a comprehensive platform that allows users to search
 - Java
 
 **Database:**
-- H2 (or any other preferred database)
+- MySql DataBase
 
 **Others:**
 - JWT for authentication
